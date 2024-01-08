@@ -1,6 +1,7 @@
 #include "VirtualMachine.h"
 
-VirtualMachine::VirtualMachine(string folderPath, string fileName)
+VirtualMachine::VirtualMachine(const string &folderPath,
+                               const string &fileName)
 {
     registers = new char[REGSIZE]();
 
@@ -31,6 +32,7 @@ VirtualMachine::VirtualMachine(string folderPath, string fileName)
 VirtualMachine::~VirtualMachine()
 {
     delete[] registers;
+    delete[] memory;
 }
 
 void VirtualMachine::PrintProgram()

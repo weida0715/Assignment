@@ -1,4 +1,4 @@
-Registers: 00 00 00 00 23 00 00#
+Registers: 00 00 00 00 123 00 00#
 Flags    : 0 0 0 0#
 PC.      : 2
 

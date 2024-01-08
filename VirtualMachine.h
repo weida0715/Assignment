@@ -23,8 +23,7 @@ private:
 
 public:
     // Constructor
-    // VirtualMachine();
-    VirtualMachine(string, string);
+    VirtualMachine(const string &, const string &);
     ~VirtualMachine();
 
     void PrintProgram();
