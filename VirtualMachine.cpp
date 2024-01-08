@@ -136,12 +136,7 @@ void VirtualMachine::RunInstruction(const string &op, const string &p1, const st
             Div(rdst, rsrc);
     }
     else if (op == "INC")
-    {
-        if (value != 0)
-            Add(rdst, value);
-        else
-            Add(rdst, rsrc);
-    }
+        Inc(rdst);
     else if (op == "DEC")
         Dec(rdst);
     else if (op == "ROL")

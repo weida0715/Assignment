@@ -26,10 +26,10 @@ int main()
     for (auto test : testFiles)
     {
         startProgram(folderPath, test);
+        endProgram();
     }
 
     // End Program
-    endProgram();
 
     return 0;
 }
