@@ -2,15 +2,12 @@
 
 VirtualMachine::VirtualMachine(string folderPath, string fileName)
 {
-    registers = new char(7);
-    for (int r = 0; r < 7; r++)
-        registers[r] = 0;
+    registers = new char[REGSIZE]();
 
     pc = 0;
     of = uf = cf = zf = false;
 
-    for (int i = 0; i < MEMSIZE; i++)
-        memory[i] = 0;
+    memory = new char[MEMSIZE]();
 
     inputPath = folderPath;
     inputFile = fileName;

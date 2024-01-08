@@ -7,6 +7,7 @@
 #include <algorithm>
 using namespace std;
 
+const int REGSIZE = 7;
 const int MEMSIZE = 64;
 
 class VirtualMachine
@@ -15,7 +16,7 @@ private:
     char *registers;
     int pc;
     bool of, uf, cf, zf;
-    char memory[MEMSIZE];
+    char *memory;
     string inputPath, inputFile;
     vector<string> program;
     string outputFile;
