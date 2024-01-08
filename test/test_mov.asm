@@ -1,0 +1,3 @@
+MOV R2, 10
+MOV R1, R2
+MOV R3, [2]
