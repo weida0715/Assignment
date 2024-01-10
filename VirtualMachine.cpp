@@ -277,8 +277,16 @@ void VirtualMachine::UpdateFlag(const int &val1, const int &val2 = 0,
     {
         for (int i = 0; i < 8; i++)
         {
-            if ((bin1[i] == '1') && (bin2[i] == '1'))
-                SetCF(true);
+            if (op == "ADD")
+            {
+                if ((bin1[i] == '1') && (bin2[i] == '1'))
+                    SetCF(true);
+            }
+            else if (op == "SUB")
+            {
+                if ((bin1[i] == '0') && (bin2[i] == '1'))
+                    SetCF(true);
+            }
         }
     }
 }
